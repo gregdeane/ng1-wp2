@@ -4,9 +4,17 @@
   "private": true,
   "license": "MIT",
   "author": "Greg Deane",
-  "scripts": {},
+  "scripts": {
+    "pretest": "npm run rimraf -- coverage",
+    "test": "",
+    "rimraf": "rimraf",
+    "server:dev": "webpack-dev-server --config config/webpack.dev.js --inline --progress --watch --content-base dist/",
+    "start": "npm run server:dev"
+  },
   "dependencies": {},
   "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
+    "codelyzer": "1.0.0-beta.2",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
@@ -15,8 +23,8 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "ts-loader": "^1.0.0",
     "tslint": "^3.15.1",
+    "tslint-loader": "^2.1.5",
     "typescript": "^2.0.6",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.9",
