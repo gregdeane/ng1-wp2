@@ -1,3 +1,4 @@
-let b: string = 'hi';
+let b: string = 'hello';
 let c = 2;
-console.log(b + c);
+const d = 3;
+console.log(b + c, d);
