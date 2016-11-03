@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const autoprefixer = require('autoprefixer');
 const paths = require('./paths');
 const loaders = require('./loaders/loaders.common');
 
@@ -39,6 +40,13 @@ module.exports = {
             paths.breakpointSass,
             paths.dressCode
           ]
+        },
+        postcss: function () {
+          return [
+            autoprefixer({
+              browsers: ['>1%', 'last 4 versions', 'Firefox ESR', 'not ie < 9']
+            }),
+          ];
         }
       }
     })
