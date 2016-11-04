@@ -10,7 +10,19 @@
     "noEmitHelpers": false,
     "noImplicitAny": true,
     "removeComments": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "angular",
+      "chalk",
+      "node",
+      "webpack",
+      "webpack-dev-server",
+      "webpack-merge"
+    ]
   },
   "exclude": [
     "node_modules",

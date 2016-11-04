@@ -1,13 +1,15 @@
-const webpack = require('webpack');
+import loaders from './loaders/loaders.common-ts';
+import paths from './paths-ts';
+import settings from './settings';
+
+const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
-const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const autoprefixer = require('autoprefixer');
-const paths = require('./paths');
-const loaders = require('./loaders/loaders.common');
 
-module.exports = {
+export default {
   entry: [
+    `webpack-dev-server/client?http://localhost:${settings.port}/`,
     paths.indexTs
   ],
   resolve: {
