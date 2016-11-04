@@ -10,13 +10,60 @@
   version "0.4.31"
   resolved "https://registry.yarnpkg.com/@types/chalk/-/chalk-0.4.31.tgz#a31d74241a6b1edbb973cf36d97a2896834a51f9"
 
+"@types/express-serve-static-core@*":
+  version "4.0.39"
+  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.39.tgz#45157f96480d46f254648f45b2c6d70bd9fc9f54"
+  dependencies:
+    "@types/node" "*"
+
 "@types/jquery@*":
   version "2.0.33"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.33.tgz#684ef3a2e99f6fd2afc52a357e47ae05f51f4f6c"
 
-"@types/node":
+"@types/mime@*":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"
+
+"@types/node", "@types/node@*":
   version "6.0.46"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.46.tgz#8d9e48572831f05b11cc4c793754d43437219d62"
+
+"@types/serve-static@*":
+  version "1.7.31"
+  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.7.31.tgz#15456de8d98d6b4cff31be6c6af7492ae63f521a"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/mime" "*"
+
+"@types/source-map@*":
+  version "0.1.29"
+  resolved "https://registry.yarnpkg.com/@types/source-map/-/source-map-0.1.29.tgz#d7048a60180b09f8aa6d53bda311c6b51cbd7018"
+
+"@types/uglify-js@*":
+  version "2.6.28"
+  resolved "https://registry.yarnpkg.com/@types/uglify-js/-/uglify-js-2.6.28.tgz#1499b48ca3a44132250b318cdde25b8f45f0c616"
+  dependencies:
+    "@types/source-map" "*"
+
+"@types/webpack", "@types/webpack@*":
+  version "1.12.35"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-1.12.35.tgz#803024d0918eb23effa8dbe9209829c856652a52"
+  dependencies:
+    "@types/uglify-js" "*"
+
+"@types/webpack-dev-server":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-1.12.2.tgz#5fba6d47f47481e33f0539af277fcfa10f419ab7"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/serve-static" "*"
+    "@types/webpack" "*"
+
+"@types/webpack-merge":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@types/webpack-merge/-/webpack-merge-0.0.3.tgz#512a9d954bef70100acb8daf8e187b03e75be54f"
+  dependencies:
+    "@types/webpack" "*"
 
 abbrev@1:
   version "1.0.9"
@@ -187,7 +234,7 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-autoprefixer@^6.3.1:
+autoprefixer, autoprefixer@^6.3.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.5.1.tgz#ae759a5221e709f3da17c2d656230e67c43cbb75"
   dependencies:
