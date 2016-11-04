@@ -4,10 +4,10 @@ import * as chalk from 'chalk';
 import runDevServer from './server';
 import prompt from './utils/prompt';
 import clearConsole from './utils/clearConsole';
-// import runDevServer from './server';
 import paths from '../config/paths-ts';
+import settings from '../config/settings';
 
-const DEFAULT_PORT = process.env.PORT || 3000;
+const DEFAULT_PORT = settings.port;
 
 // warn and crash if required files are missing
 if (!checkRequiredFiles([paths.indexHtml, paths.indexTs])) {

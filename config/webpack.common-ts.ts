@@ -1,6 +1,6 @@
-import * as webpack from 'webpack';
 import loaders from './loaders/loaders.common-ts';
 import paths from './paths-ts';
+import settings from './settings';
 
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 
 export default {
   entry: [
+    `webpack-dev-server/client?http://localhost:${settings.port}/`,
     paths.indexTs
   ],
   resolve: {
@@ -18,9 +19,6 @@ export default {
     loaders: loaders
   },
   plugins: [
-    // hot reloading
-    new webpack.HotModuleReplacementPlugin(),
-
     // perform type checking in a separate process
     new ForkCheckerPlugin(),
 

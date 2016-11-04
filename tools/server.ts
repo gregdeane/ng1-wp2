@@ -12,7 +12,6 @@ export default (host: string, port: number, protocol: string): void => {
   let devServer = new WebpackDevServer(compiler(host, port, protocol), {
     contentBase: paths.dist,
     publicPath: paths.root,
-    hot: true,
     quiet: true,
     https: protocol === 'https'
   });
