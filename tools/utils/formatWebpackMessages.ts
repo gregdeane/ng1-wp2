@@ -30,8 +30,6 @@ const isLikelyASyntaxError = (message: string): boolean => {
 const formatMessage = (message: string): string => {
   let lines: Array<string> = message.split('\n');
 
-  console.log('message', message);
-
   // line #0 is filename
   // line #1 is the main error message
   if (!lines[0] || !lines[1]) {
@@ -118,7 +116,6 @@ const formatMessage = (message: string): string => {
 };
 
 export default (json: any): any => {
-  console.log('json', json.errors, typeof json.errors);
   let formattedErrors: Array<string> = json.errors.map((message: string): string => {
     return 'Error in ' + formatMessage(message)
   });
