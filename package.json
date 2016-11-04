@@ -12,8 +12,11 @@
     "start": "npm run server:dev",
     "start:ts": "ts-node tools/start"
   },
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
   "devDependencies": {
+    "@types/angular": "^1.5.19",
     "@types/chalk": "^0.4.31",
     "@types/node": "^6.0.46",
     "awesome-typescript-loader": "^2.2.4",

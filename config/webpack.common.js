@@ -17,7 +17,7 @@ module.exports = {
     loaders: loaders
   },
   plugins: [
-    // do type checking in a separate process
+    // perform type checking in a separate process
     new ForkCheckerPlugin(),
 
     // simplify creation of HTML files for serving webpack bundles
@@ -26,6 +26,7 @@ module.exports = {
       template: paths.indexHtml
     }),
 
+    // load helpers (tslint, postcss, etc.)
     new LoaderOptionsPlugin({
       debug: true,
       options: {

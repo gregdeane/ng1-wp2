@@ -1,4 +1,12 @@
-let b: string = 'hello';
-let c = 2;
-const d = 3;
-console.log(b + c, d);
+import * as angular from 'angular';
+import './app/index';
+
+angular.module('solutioncenter.mvp', [
+  'solutioncenter.mvp.app'
+]);
+
+angular.element(document).ready(() => {
+  angular.bootstrap(document, ['solutioncenter.mvp'], {
+    strictDi: true
+  });
+});
