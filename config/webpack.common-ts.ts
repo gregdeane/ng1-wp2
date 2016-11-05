@@ -2,7 +2,6 @@ import loaders from './loaders/loaders.common-ts';
 import paths from './paths-ts';
 import settings from './settings';
 
-const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const autoprefixer = require('autoprefixer');
@@ -19,9 +18,6 @@ export default {
     loaders: loaders
   },
   plugins: [
-    // perform type checking in a separate process
-    new ForkCheckerPlugin(),
-
     // simplify creation of HTML files for serving webpack bundles
     new HtmlWebpackPlugin({
       inject: true,

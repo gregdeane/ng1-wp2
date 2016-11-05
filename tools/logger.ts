@@ -1,7 +1,7 @@
 import clearConsole from './utils/clearConsole';
 
 // display issues (linting, etc.)
-const issues = (msgs: Array<string>) => {
+const issues = (msgs: Array<string>): void => {
   clearConsole();
   msgs.forEach(msg => {
     console.log(msg);
@@ -9,12 +9,12 @@ const issues = (msgs: Array<string>) => {
 };
 
 // display message
-const msg = (msg: string) => {
+const msg = (msg: string): void => {
   console.log(msg);
 };
 
 // default Webpack output is turned off
 // present messages/warnings/errors in readable format
-export default () => {
+export default (): any => {
   return { msg, issues };
 };
