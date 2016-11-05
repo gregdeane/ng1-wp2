@@ -8,9 +8,7 @@
     "pretest": "npm run rimraf -- coverage",
     "test": "",
     "rimraf": "rimraf",
-    "server:dev": "webpack-dev-server --config config/webpack.dev.js --inline --progress --watch --content-base dist/",
-    "start": "npm run server:dev",
-    "start:ts": "ts-node tools/start"
+    "start": "ts-node tools/start"
   },
   "dependencies": {
     "angular": "^1.5.8"

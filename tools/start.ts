@@ -1,5 +1,4 @@
 import checkRequiredFiles from './utils/checkRequiredFiles';
-// import * as detect from 'detect-port';
 import * as chalk from 'chalk';
 import runDevServer from './server';
 import prompt from './utils/prompt';
@@ -7,6 +6,7 @@ import clearConsole from './utils/clearConsole';
 import paths from '../config/paths-ts';
 import settings from '../config/settings';
 
+const detect = require('detect-port');
 const DEFAULT_PORT = settings.port;
 
 // warn and crash if required files are missing
@@ -36,16 +36,14 @@ const promptUser = (port: number) => {
   });
 };
 
-run(DEFAULT_PORT);
-
 // attempt to use the default port. if it's in use, offer to run on
 // a different port. `detect()` Promise resolves to the next free port.
-// detect(DEFAULT_PORT).then((port: number) => {
-//   if (port === DEFAULT_PORT) {
-//     // run(port);
-//     return;
-//   }
-//
-//   promptUser(port);
-//
-// });
+detect(DEFAULT_PORT).then((port: number) => {
+  if (port === DEFAULT_PORT) {
+    run(port);
+    return;
+  }
+
+  promptUser(port);
+
+});
