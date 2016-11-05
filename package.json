@@ -31,6 +31,7 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "^3.11.1",
+    "opn": "^4.0.2",
     "postcss-loader": "^1.1.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
