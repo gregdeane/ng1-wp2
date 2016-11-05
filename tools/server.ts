@@ -1,10 +1,11 @@
 import * as WebpackDevServer from 'webpack-dev-server';
-// import openBrowser from 'react-dev-utils/openBrowser';
+import openBrowser from './utils/openBrowser';
 import * as chalk from 'chalk';
 import compiler from './compiler';
-// import middleware from './middleware';
 import logger from './logger';
 import paths from '../config/paths-ts';
+
+// import middleware from './middleware';
 
 const log = logger();
 
@@ -23,6 +24,6 @@ export default (host: string, port: number, protocol: string): void => {
     }
 
     log.msg(chalk.cyan('Starting the development server...\n'));
-    //openBrowser(protocol + '://' + host + ':' + port + '/');
+    openBrowser(`${protocol}://${host}:${port}/`);
   });
 };

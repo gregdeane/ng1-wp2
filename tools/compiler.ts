@@ -13,7 +13,7 @@ const success = (host: string, port: number, protocol: string): string => {
     'The app is running at:\n',
     chalk.cyan(`${protocol}://${host}:${port}/\n\n`),
     'Note that the development build is not optimized.\n',
-    `To create a production build, use ${chalk.cyan('npm run build')}`
+    `To create a production build, use ${chalk.cyan('npm run build')}\n`
   ].join('');
 };
 
