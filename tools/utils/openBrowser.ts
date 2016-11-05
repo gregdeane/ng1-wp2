@@ -14,28 +14,9 @@
  * for original implementation.
  */
 
-const execSync = require('child_process').execSync;
 const opn = require('opn');
 
-export default (url: string) => {
-
-  if (process.platform === 'darwin') {
-    try {
-      // Try our best to reuse existing tab
-      // on OS X Google Chrome with AppleScript
-      execSync('ps cax | grep "Google Chrome"');
-      execSync(
-        'osascript openChrome.applescript ' + url,
-        {cwd: __dirname, stdio: 'ignore'}
-      );
-      return true;
-    } catch (err) {
-      // Ignore errors.
-    }
-  }
-
-  // Fallback to opn
-  // (It will always open new tab)
+export default (url: string): boolean => {
   try {
     opn(url).catch(() => {}); // Prevent `unhandledRejection` error.
     return true;
