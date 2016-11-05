@@ -95,7 +95,7 @@ export default (json: any): any => {
     warnings: formattedWarnings
   };
 
-  // If there are any syntax errors, show just them
+  // if syntax errors are found, only show those
   if (result.errors.some(isLikelyASyntaxError)) {
     result.errors = result.errors.filter(isLikelyASyntaxError);
   }
